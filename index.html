@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <html data-theme="light">
+
+    </html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="bg-[#D66EFD0D]">
+            <div class="container mx-auto p-4">
+                <div class="flex justify-around">
+                    <h5 class="font-bold text-2xl">Hot Gadgets</h5>
+                    <button class="btn btn-secondary border-0 bg-[#0D6EFD]">Sign Up</button>
+                </div>
+                <div class="mt-16">
+                    <h1 class="font-bold text-7xl text-center">Apple Iphone 13 Pro Max</h1>
+                </div>
+                <p class="text-center mt-6 text-[#706F6F]">There are many variations of passages of Lorem Ipsum
+                    available,
+                    but the majority have suffered alteration in some form, by injected humou.</p>
+                <div class="text-center mt-8">
+                    <button class="btn btn-secondary bg-[#0D6EFD] border-0">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container mx-auto mt-8">
+        <!-- Search result -->
+        <section class="mt-8 p-4 bg-gray-200 m-4 text-center rounded-xl">
+            <div>
+                <input id="search-field" type="text" placeholder="Search here..."
+                    class="input input-bordered w-full max-w-xs rounded-e-none " />
+                <button id="s-btn" onclick="search()"
+                    class="btn btn-secondary border-0 bg-[#0D6EFD] font-bold">Search</button>
+            </div>
+        </section>
+        <!-- Cards container -->
+        <section>
+            <!-- spinner -->
+            <div id="spinner" class="text-center my-40 hidden">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+            <!-- Not available -->
+            <div id="not-available" class="hidden">
+                <h1 class="text-6xl text-center">Not Available</h1>
+            </div>
+            <!-- All cards container -->
+            <div id="p-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            </div>
+            <!-- Show all button -->
+            <div onclick="showAll()" id="show-all" class="hidden text-center my-8">
+                <button class="btn btn-primary">Show All</button>
+            </div>
+        </section>
+        <div>
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="my_modal_details" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <h3 id="phone-name" class="font-bold text-lg">Hello!</h3>
+                    <div id="phone-details-container" class="my-4">
+
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn bg-red-500">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </div>
+    </main>
+    <footer class="bg-sky-50 mt-14">
+        <div class="container mx-auto">
+            <div class="flex justify-around pt-24">
+                <div>
+                    <p class="text-bold text-5xl ">Hot Gadgets</p>
+                    <p class="my-2">You can definitely work.</p>
+                </div>
+                <div>
+                    <div class="flex gap-6">
+                        <div class="flex gap-2 p-4">
+                            <i class="fa-brands fa-facebook text-2xl" style="color: #2c66c3;"></i>
+                            <i class="fa-brands fa-square-twitter text-2xl" style="color: #5f88ce;"></i>
+                            <i class="fa-brands fa-instagram text-2xl" style="color: #ec4680;"></i>                            
+                        </div>
+                        <button class="btn bg-[#0D6EFD] text-white">Join Premium</button>
+                    </div>
+                </div>
+            </div><br>
+            <hr>
+            <div class="grid grid-cols-2 lg:grid-cols-4 p-7 gap-40">
+                <ul>
+                    <li>Products</li>
+                    <li>Browse Jobs</li>
+                    <li>Remote jobs</li>
+                    <li>Startup Jobs</li>
+                    <li>Company Jobs</li>
+                </ul>
+                <ul>
+                    <li>Popular</li>
+                    <li>UI/UX Design</li>
+                    <li>Product Design</li>
+                    <li>Back-End Developer</li>
+                    <li>Front-End Developer</li>
+                </ul>
+                <ul>
+                    <li>Resource</li>
+                    <li>Faq</li>
+                    <li>Support</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Services</li>
+                </ul>
+                <ul>
+                    <li>Company</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Career Tips</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="js/phone.js"></script>
+</body>
+
+</html>
